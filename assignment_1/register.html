@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>สมัครเช่าพื้นที่แสดงสินค้างาน Winter Seasonal</title>
+    <style>
+        body {
+            background-image: url('src/clothes.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center h-screen">
+    <div class="w-full md:w-4/5 lg:w-3/5 xl:w-2/5 p-8 bg-white rounded-lg shadow-md">
+        <h1 class="text-3xl font-semibold mb-4 text-center">แบบฟอร์มกรอกสำหรับการสมัครเช่าพื้นที่</h1>
+        <form id="register">
+            <div class="mb-4">
+                <label for="companyName" class="block font-semibold mb-1">ชื่อบริษัท (Company Name)</label>
+                <input type="text" id="companyName" name="companyName" placeholder="ชื่อบริษัท" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500 duration-150" required>
+            </div>
+            <div class="mb-4">
+                <label for="size" class="block font-semibold mb-1">ขนาดบูธ (Booth Size)</label>
+                <select id="size" name="size" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500 duration-150" required>
+                    <option value="10T10">10 x 10 ฟุต (Ft)</option>
+                    <option value="10T15">10 x 15 ฟุต (Ft)</option>
+                </select>
+            </div>
+            <div class="mb-4">
+                <label class="block font-semibold mb-1">ต้องการโต๊ะตั้งในบูธ (Additional Booth Table ?)</label>
+                <div class="flex">
+                    <input type="radio" id="wantTable" name="wantTable" value="yes" class="mr-2" required checked>
+                    <label for="wantTable" class="mr-4">ต้องการ</label>
+                    <input type="radio" id="dontWantTable" name="wantTable" value="no" class="mr-2" required>
+                    <label for="dontWantTable">ไม่ต้องการ</label>
+                </div>
+            </div>
+            <div class="mb-4">
+                <label for="chairAmount" class="block font-semibold mb-1">จำนวนเก้าอี้ (Chair Amount)</label>
+                <input type="number" id="chairAmount" name="chairAmount" placeholder="จำนวนเก้าอี้" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500 duration-150" required>
+            </div>
+            <div class="mb-4">
+                <label for="contactPerson" class="block font-semibold mb-1">ชื่อผู้ติดต่อ (Contact Name)</label>
+                <input type="text" id="contactPerson" name="contactPerson" placeholder="ชื่อผู้ติดต่อ" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500 duration-150" required>
+            </div>
+            <div class="mb-4">
+                <label for="contactNumber" class="block font-semibold mb-1">เบอร์ผู้ติดต่อ (Contact Phone Number)</label>
+                <input type="text" id="contactNumber" name="contactNumber" placeholder="เบอร์ผู้ติดต่อ" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500 duration-150" required>
+            </div>
+            <button class="w-full bg-blue-600 transform hover:bg-blue-800 hover:scale-105 text-white font-semibold rounded-lg py-2 focus:outline-none duration-300">
+                <a href="index.html" class="block text-center">Submit</a>
+            </button>
+        </form>
+    </div>
+</body>
+</html>
