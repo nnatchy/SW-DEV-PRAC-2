@@ -15,6 +15,11 @@
     </style>
 </head>
 <body class="flex items-center justify-center h-screen">
+    <nav class="fixed top-0 z-10 w-screen bg-gray-900 text-white py-2">
+        <ul class="flex justify-center space-x-6 font-semibold">
+            <li class="transform hover:scale-110 duration-300"><a href="./index.html">Home</a></li>
+        </ul>
+    </nav>
     <div class="w-full md:w-4/5 lg:w-3/5 xl:w-2/5 p-8 bg-white rounded-lg shadow-md">
         <h1 class="text-3xl font-semibold mb-4 text-center">แบบฟอร์มกรอกสำหรับการสมัครเช่าพื้นที่</h1>
         <form id="register">
@@ -33,9 +38,9 @@
                 <label class="block font-semibold mb-1">ต้องการโต๊ะตั้งในบูธ (Additional Booth Table ?)</label>
                 <div class="flex">
                     <input type="radio" id="wantTable" name="wantTable" value="yes" class="mr-2" required checked>
-                    <label for="wantTable" class="mr-4">ต้องการ</label>
+                    <label for="wantTable" class="mr-4">ต้องการ (Yes)</label>
                     <input type="radio" id="dontWantTable" name="wantTable" value="no" class="mr-2" required>
-                    <label for="dontWantTable">ไม่ต้องการ</label>
+                    <label for="dontWantTable">ไม่ต้องการ (No)</label>
                 </div>
             </div>
             <div class="mb-4">

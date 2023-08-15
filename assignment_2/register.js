@@ -30,5 +30,6 @@ const isValidToSubmit = () => {
         return false;
     }
     alert("ลงทะเบียนสำเร็จ !");
-    return true;
+    window.location.href = "./index.html";
+    return false;
 }
