@@ -14,8 +14,9 @@ const isValidToSubmit = () => {
         companyName.classList.add("invalid-input");
         return false;
     }
-    if (chairAmount.value == "" || chairAmount.value < 1 || chairAmount.value > 10) {
+    if (chairAmount.value == "" || chairAmount.value < 1 || chairAmount.value > 10 || chairAmount.value % 1 != 0) {
         alert("โปรดระบุค่าตัวเลขตั้งแต่ 1 ถึง 10 (Please specify a number between 1 and 10)");
+        chairAmount.value = "";
         chairAmount.classList.add("invalid-input");
         return false;
     }
