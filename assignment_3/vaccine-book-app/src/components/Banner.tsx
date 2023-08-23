@@ -27,14 +27,16 @@ export default function Banner() {
                 <h1>บริการฉีดวัคซีนโควิด
                     <span>ฟรี</span>
                 </h1>
-                <h3>วัคซีนป้องกันโรคโควิด ให้คนไทยได้รับการฉีดอย่างทั่วถึง</h3>
+                <h3>วัคซีนป้องกันโรคโควิด 
+                    <span className={styles.pfizer}>
+                        <a href="https://www.pfizer.co.th/" target='_blank'>Pfizer</a>
+                    </span>
+                    ให้คนไทยได้รับการฉีดอย่างทั่วถึง
+                </h3>
                 <p>
                     เปิดให้เข้ารับการฉีดตั้งเเต่ 
                     <span>08.00 - 17.30 น.</span>
                 </p>
-                {/* <button className={styles.button} onClick={toCardSection}>
-                    ประเภทเเละสรรพคุณของวัคซีน  
-                </button> */}
             </div>
         </div>
     )

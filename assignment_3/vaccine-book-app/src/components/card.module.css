@@ -1,50 +1,64 @@
 div.card {
-    width: 300px;
-    height: 400px;
+    width: 450px;
+    height: 750px;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     padding-top: 10px;
     margin: 20px 30px;
     transition: opacity 0.5s ease;
+    background: linear-gradient(135deg, #f6f6f6, #ffffff);
+    font-size: 18px;
+    line-height: 1.7;
+    border: 4px solid #21628d;
+    transition: transform 0.4s;
 }
 
+/* Adjust border color on hover for an interactive effect */
 div.card:hover {
-    opacity: 0.3;
+    border-color: #3ce7e4; /* Example border color on hover */
+    transform: scale(1.015);
 }
 
 div.cardImg {
     width: 100%;
     height: 50%;
     position: relative;
-    /* display: block; Add display property */
 }
 
-div.cardTopic {
-    position: absolute;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    transform: translate(-50%, -50%);
-    height: 30%;
-    color: red;
-    width: 100%; /* Add width property */
-    text-align: center; /* Center the text horizontally */
-}
 
 div.cardText {
-    height: 60%;
-    padding: 5px 10px;
+    height: 17%;
+    padding: 5px 10px 0 10px;
+    margin-bottom: 5px; /* Add margin-bottom to reduce the gap */
     color: black;
-    font-size: 18px;
-    font-weight: 600;
-    opacity: 0; /* Start with 0 opacity */
-    transition: opacity 0.3s ease, transform 0.3s ease; /* Add transitions for opacity and transform */
-    transform: translateY(10px); /* Start with a slight translateY transformation */
-    line-height: 1.7;
+    font-weight: 500;
+    opacity: 1;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    /* transform: translateY(10px); */
 }
+
+div.cardExample {
+    height: 50%;
+    padding: 5px 10px;
+    /* line-height: 20px; */
+    color: black;
+    font-weight: 500;
+}
+
+div.cardExample li {
+    margin-left: 30px;
+    line-height: 27px;
+    list-style: none;
+    position: relative; 
+}
+
+div.cardExample li::before {
+    content: "💉"; /* Change this to the character you want */
+    position: absolute;
+    left: -25px; /* Adjust this value to align the marker */
+}
+
 
 div.card:hover .cardText {
     opacity: 1; /* Change opacity to 1 on hover */
