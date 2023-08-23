@@ -1,7 +1,7 @@
 import Banner from '@/components/Banner'
 import Card from '@/components/Card'
 import styles from './page.module.css'
-import { FaHeartbeat, FaQuestionCircle } from 'react-icons/fa'
+import { FaHeartbeat, FaQuestionCircle, FaPhoneAlt } from 'react-icons/fa'
 
 export default function Home() {
   return (
@@ -19,7 +19,7 @@ export default function Home() {
           </p>
           <p className={styles.paragraph}>
             เมื่อ mRNA ถูกฉีดเข้าไปในร่างกาย จะกระตุ้นให้เกิดการสร้างโปรตีนส่วนหนาม (Spike protein) เหมือนกับโคโรนาไวรัส ซึ่งเป็นส่วนที่ทำให้เกิดการติดเชื้อจนเป็นโควิด 19 เมื่อร่างกายเห็นโปรตีนส่วนหนามของไวรัสแล้ว จึงสามารถสร้างภูมิคุ้มกันไว้สำหรับป้องกันไวรัสจริงๆ ที่จะเข้ามาได้
-          </p>  
+          </p>
           <p className={styles.paragraph}>
             วัคซีนไฟเซอร์ได้รับการอนุมัติให้ใช้ในกรณีฉุกเฉินจากองค์การอาหารและยาสหรัฐ (Food and Drug Administration: FDA) เพื่อป้องกันโรคโควิด 19 สำหรับผู้ที่อายุ 12 ปีขึ้นไป
           </p>
@@ -29,9 +29,9 @@ export default function Home() {
         </div>
         <Card />
         <div className={styles.pfizerInfo}>
-          <h2 className={styles.cardTopic}>ผลข้างเคียงของตัววัคซีน <FaHeartbeat/></h2>
-          <p style={{marginBottom: 10}}>
-          ผลข้างเคียงที่อาจพบได้หลังได้รับวัคซีนไฟเซอร์ ได้แก่
+          <h2 className={styles.cardTopic}>ผลข้างเคียงของตัววัคซีน <FaHeartbeat /></h2>
+          <p style={{ marginBottom: 10 }}>
+            ผลข้างเคียงที่อาจพบได้หลังได้รับวัคซีนไฟเซอร์ ได้แก่
             <ul>
               <li>ปวด บวม แดง คัน หรือช้ำในจุดที่ฉีด</li>
               <li>มีไข้ หนาวสั่น</li>
@@ -42,17 +42,20 @@ export default function Home() {
               <li>ท้องเสีย</li>
             </ul>
           </p>
-          <h2 className={styles.cardTopic}>วัคซีน Pfizer เหมาะกับใคร <FaQuestionCircle/> </h2>
+          <h2 className={styles.cardTopic}>วัคซีน Pfizer เหมาะกับใคร <FaQuestionCircle /> </h2>
           <ul>
             <li>ผู้ที่อายุ 16 ปีขึ้นไป</li>
-            <li>ผู้ที่อายุเกิน 65 ปีขึ้นไป <span style={{color: 'red', }}>ควรปรึกษาแพทย์ก่อนรับวัคซีน</span></li>
+            <li>ผู้ที่อายุเกิน 65 ปีขึ้นไป <span style={{ color: 'red', }}>ควรปรึกษาแพทย์ก่อนรับวัคซีน</span></li>
             <li>ผู้ที่ทำงานด้านสาธารณสุข</li>
             <li>ผู้ที่มีโรคประจำตัวที่อาจส่งผลให้อาการรุนแรงหากติดเชื้อโควิด 19 เช่น ความดันโลหิตสูง เบาหวาน โรคหอบหืด โรคปอด โรคตับ โรคไต และโรคติดเชื้อเรื้อรังอื่นๆ</li>
             <li>ผู้ป่วยติดเชื้อ HIV</li>
-            <li>สตรีที่กำลังอยู่ระหว่างให้นมบุตร <br /> <span style={{color: 'red', }}>ควรปรึกษาแพทย์ก่อนรับวัคซีน</span></li>
-            <li>สตรีมีครรภ์ <span style={{color: 'red'}}>ควรปรึกษาแพทย์ก่อนรับวัคซีน</span></li>
+            <li>สตรีที่กำลังอยู่ระหว่างให้นมบุตร <br /> <span style={{ color: 'red', }}>ควรปรึกษาแพทย์ก่อนรับวัคซีน</span></li>
+            <li>สตรีมีครรภ์ <span style={{ color: 'red' }}>ควรปรึกษาแพทย์ก่อนรับวัคซีน</span></li>
           </ul>
         </div>
+      </div>
+      <div>
+        <h1 style={{display: 'flex', justifyContent: 'center', marginTop: 10}}>พบข้อสงสัยเกี่ยวกับตัวบริการฉีดวัคซีนครั้งนี้ โปรดติดต่อ <span style={{marginLeft: 10, paddingTop: 5}}><FaPhoneAlt/></span> <span style={{marginLeft: 10, color: 'magenta'}}>09X-XXX-XXXX</span></h1>
       </div>
     </main>
   )

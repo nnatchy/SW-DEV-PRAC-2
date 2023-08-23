@@ -14,9 +14,8 @@ div.card {
     transition: transform 0.4s;
 }
 
-/* Adjust border color on hover for an interactive effect */
 div.card:hover {
-    border-color: #3ce7e4; /* Example border color on hover */
+    border-color: #3ce7e4;
     transform: scale(1.015);
 }
 
@@ -28,42 +27,42 @@ div.cardImg {
 
 
 div.cardText {
+    text-indent: 1.5rem;
     height: 17%;
     padding: 5px 10px 0 10px;
-    margin-bottom: 5px; /* Add margin-bottom to reduce the gap */
+    margin-bottom: 5px;
     color: black;
     font-weight: 500;
     opacity: 1;
     transition: opacity 0.3s ease, transform 0.3s ease;
-    /* transform: translateY(10px); */
 }
 
 div.cardExample {
+    text-indent: 1.5rem;
     height: 50%;
     padding: 5px 10px;
-    /* line-height: 20px; */
     color: black;
     font-weight: 500;
 }
 
 div.cardExample li {
     margin-left: 30px;
-    line-height: 27px;
+    line-height: 2rem;
     list-style: none;
     position: relative; 
 }
 
 div.cardExample li::before {
-    content: "💉"; /* Change this to the character you want */
+    content: "💉";
     position: absolute;
-    left: -25px; /* Adjust this value to align the marker */
+    left: -25px;
 }
 
 
 div.card:hover .cardText {
-    opacity: 1; /* Change opacity to 1 on hover */
-    transform: translateY(0); /* Apply no translateY transformation on hover */
-    transition-delay: 0.2s; /* Delay the appearance of the text */
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.2s;
 }
 
 div.card:hover .cardImg {

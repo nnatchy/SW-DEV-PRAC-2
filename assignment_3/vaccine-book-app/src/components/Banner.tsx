@@ -1,16 +1,8 @@
 import Image from 'next/image'
 import { FaCalendarAlt, FaSearchLocation } from 'react-icons/fa'
 import styles from "./banner.module.css"
-import Card from "@/components/Card"
-// import { useRouter } from 'next/navigation'
 
 export default function Banner() {
-    // const router = useRouter();
-
-    // const toCardSection = () => {
-    //     router.push("/#card-section");
-    // }
-
     return (
         <div className={styles.banner}>
             <Image src={'/img/background.jpg'}
