@@ -38,8 +38,8 @@ export default function Home() {
         <Card />
         <div className={styles.pfizerInfo}>
           <h2 className={styles.cardTopic}>ผลข้างเคียงของตัววัคซีน <FaHeartbeat /></h2>
-          <p style={{ marginBottom: 10 }}>
-            ผลข้างเคียงที่อาจพบได้หลังได้รับวัคซีนไฟเซอร์ ได้แก่
+          <div style={{ marginBottom: 10 }}>
+            <p>ผลข้างเคียงที่อาจพบได้หลังได้รับวัคซีนไฟเซอร์ ได้แก่</p>
             <ul>
               <li>ปวด บวม แดง คัน หรือช้ำในจุดที่ฉีด</li>
               <li>มีไข้ หนาวสั่น</li>
@@ -49,7 +49,7 @@ export default function Home() {
               <li>คลื่นไส้ อาเจียน</li>
               <li>ท้องเสีย</li>
             </ul>
-          </p>
+          </div>
           <h2 className={styles.cardTopic}>วัคซีน Pfizer เหมาะกับใคร <FaQuestionCircle /> </h2>
           <ul>
             <li>ผู้ที่อายุ 16 ปีขึ้นไป</li>
