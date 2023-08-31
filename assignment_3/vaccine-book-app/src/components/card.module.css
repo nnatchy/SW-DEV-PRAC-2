@@ -1,10 +1,10 @@
 div.card {
-    width: 450px;
-    height: 750px;
+    /* width: 450px; assignment_4 */
+    /* height: 750px; assignment_4 */
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    padding-top: 10px;
+    /* padding-top: 10px; assignment_4 */
     margin: 20px 30px;
     transition: opacity 0.5s ease;
     background: linear-gradient(135deg, #f6f6f6, #ffffff);
@@ -16,7 +16,7 @@ div.card {
 
 div.card:hover {
     border-color: #3ce7e4;
-    transform: scale(1.015);
+    /* transform: scale(1.015); assignment_4 */
 }
 
 div.cardImg {
@@ -29,7 +29,7 @@ div.cardImg {
 div.cardText {
     text-indent: 1.5rem;
     height: 17%;
-    padding: 5px 10px 0 10px;
+    /* padding: 5px 10px 0 10px; assignment_4 */
     margin-bottom: 5px;
     color: black;
     font-weight: 500;
