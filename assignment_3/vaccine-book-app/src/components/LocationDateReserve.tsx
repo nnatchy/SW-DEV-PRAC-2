@@ -11,7 +11,8 @@ export default function LocationDateReserve() {
         alert("Submit form successfully !");
     }
     return (
-        <div className="bg-gradient-to-r from-sky-200 via-sky-300 to-cyan-300 rounded-lg space-x-5 space-y-2 px-8 py-6 flex justify-center shadow-md border border-blue-800 border-[5px]">
+        <div className="bg-gradient-to-r from-sky-200 via-sky-300 to-cyan-300 rounded-lg space-x-5 
+        space-y-2 px-8 py-6 flex justify-center shadow-md border border-blue-800 border-[5px]">
             <FormControl variant="filled" className="flex justify-center space-y-[30px]" fullWidth>
                 <p className="text-center text-black text-4xl font-bold">เเบบฟอร์มการจองรับวัคซีน</p>
                 <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />

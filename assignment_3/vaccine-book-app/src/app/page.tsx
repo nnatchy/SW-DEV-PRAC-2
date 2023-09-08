@@ -15,21 +15,16 @@ export default function Home() {
           <a href="https://chulalongkornhospital.go.th/kcmh/" target='_blank'>
             <Card hospitalName='Chulalongkorn Hospital' imgSrc='/img/chula.jpg' />
           </a>
-            {/* <Card hospitalName='Chulalongkorn Hospital' imgSrc='/img/chula.jpg' /> */}
         </div>
         <div>
           <a href="https://www.rajavithi.go.th/" target='_blank'>
             <Card hospitalName='Rajavithi Hospital' imgSrc='/img/rajavithi.jpg' />
           </a>
-            {/* <Card hospitalName='Rajavithi Hospital' imgSrc='/img/rajavithi.jpg' /> */}
-
         </div>
         <div>
           <a href="https://www.hospital.tu.ac.th/" target='_blank'>
             <Card hospitalName='Thammasat University Hospital' imgSrc='/img/thammasat.jpg' />
           </a>
-            {/*   <Card hospitalName='Thammasat University Hospital' imgSrc='/img/thammasat.jpg' /> */}
-
         </div>
         <div className={`${styles.pfizerInfo} mt-[60px] h-[740px]`}>
           <div className='leading-9'>

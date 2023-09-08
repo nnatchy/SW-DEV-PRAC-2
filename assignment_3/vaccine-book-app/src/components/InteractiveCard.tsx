@@ -21,7 +21,8 @@ export default function InteractiveCard( { children, contentName } : { children:
         }
     }
     return (
-        <div className='w-[420px] h-[500px] rounded-lg shadow-lg m-[0px] transform duration-[400ms] hover:scale-[1.055] bg-white shadow-white' onClick={onCardSelected} 
+        <div className='w-[420px] h-[500px] rounded-lg shadow-lg m-[0px] transform 
+        duration-[400ms] hover:scale-[1.055] bg-white shadow-white' onClick={onCardSelected} 
         onMouseOver={ (e) => onCardMouseAction(e)}
         onMouseOut={ (e) => onCardMouseAction(e)}>
             { children }
