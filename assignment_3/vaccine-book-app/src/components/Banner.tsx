@@ -1,15 +1,25 @@
+'use client'
+
 import Image from 'next/image'
 import { FaCalendarAlt, FaSearchLocation } from 'react-icons/fa'
 import styles from "./banner.module.css"
+import { useState } from 'react'
 
 export default function Banner() {
+    
+    const covers = ['/img/background.jpg', '/img/background2.jpg', '/img/background3.jpg', '/img/background4.jpg']
+    const [index, setIndex] = useState(0);
+
     return (
         <div className={styles.banner}>
-            <Image src={'/img/background.jpg'}
+            <Image src={covers[index % 4]}
                 alt='background'
                 fill={true}
                 priority
                 objectFit='cover'
+                onClick={() => {
+                    setIndex(index + 1)
+                }}
                 className={styles.image}
             />
             <div className={styles.bannerText}>

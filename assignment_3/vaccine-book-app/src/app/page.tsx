@@ -1,5 +1,5 @@
 import Banner from '@/components/Banner'
-import Card from '@/components/Card'
+import CardPanel from '@/components/CardPanel'
 import styles from './page.module.css'
 import { FaHeartbeat, FaQuestionCircle, FaPhoneAlt } from 'react-icons/fa'
 
@@ -12,19 +12,7 @@ export default function Home() {
       </div>
       <div className={styles.cardSection}>
         <div>
-          <a href="https://chulalongkornhospital.go.th/kcmh/" target='_blank'>
-            <Card hospitalName='Chulalongkorn Hospital' imgSrc='/img/chula.jpg' />
-          </a>
-        </div>
-        <div>
-          <a href="https://www.rajavithi.go.th/" target='_blank'>
-            <Card hospitalName='Rajavithi Hospital' imgSrc='/img/rajavithi.jpg' />
-          </a>
-        </div>
-        <div>
-          <a href="https://www.hospital.tu.ac.th/" target='_blank'>
-            <Card hospitalName='Thammasat University Hospital' imgSrc='/img/thammasat.jpg' />
-          </a>
+          <CardPanel />
         </div>
         <div className={`${styles.pfizerInfo} mt-[60px] h-[740px]`}>
           <div className='leading-9'>

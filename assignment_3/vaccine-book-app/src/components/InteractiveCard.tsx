@@ -3,10 +3,6 @@ import React from 'react';
 
 export default function InteractiveCard( { children, contentName } : { children: React.ReactNode, contentName: string }) {
 
-    function onCardSelected() {
-        alert("กำลังเข้าสู่เว็ปไซต์หลักของ " + contentName)
-    }
-
     function onCardMouseAction(event: React.SyntheticEvent) {
         if (event.type == "mouseover") {
             event.currentTarget.classList.remove('shadow-lg');
@@ -21,10 +17,11 @@ export default function InteractiveCard( { children, contentName } : { children:
         }
     }
     return (
-        <div className='w-[420px] h-[500px] rounded-lg shadow-lg m-[0px] transform 
-        duration-[400ms] hover:scale-[1.055] bg-white shadow-white' onClick={onCardSelected} 
+        <div className='w-[420px] h-[600px] rounded-lg shadow-lg m-[0px] transform 
+        duration-[400ms] hover:scale-[1.055] bg-white shadow-white' 
         onMouseOver={ (e) => onCardMouseAction(e)}
-        onMouseOut={ (e) => onCardMouseAction(e)}>
+        onMouseOut={ (e) => onCardMouseAction(e)}
+        >
             { children }
         </div>
     ); 

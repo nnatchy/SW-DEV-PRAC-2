@@ -28,9 +28,9 @@ div.cardImg {
 
 div.cardText {
     text-indent: 1.5rem;
-    height: 17%;
+    /* height: 14%; assignment_6 */
     /* padding: 5px 10px 0 10px; assignment_4 */
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; assignment_6 */
     color: black;
     font-weight: 500;
     opacity: 1;
