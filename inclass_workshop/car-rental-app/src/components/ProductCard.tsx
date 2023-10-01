@@ -21,7 +21,7 @@ export default function ProductCard( {carName, imgSrc, onCompare } : { carName: 
             </div>
             <button className="block h-[10%] text-sm rounded-md bg-sky-600 
             hover:bg-indigo-600 mx-2 my-5 px-1 py-1 text-white shadow-sm"
-            onClick={(e) => {e.stopPropagation; onCompare(carName)}}>Compare</button>
+            onClick={(e) => {e.stopPropagation; e.preventDefault(); onCompare(carName)}}>Compare</button>
         </InteractiveCard>
     ); 
 }
