@@ -9,8 +9,8 @@ export default function Home() {
       <Banner />
       <div className={`${styles.questionSpan}`}>
         <span className="flex">
-          <span className="mr-4">โรงพยาบาลที่เข้าร่วมโครงการ</span>
-          <span className="pt-2">
+          <span className="mr-4 pl-[20px] text-[40px]">ข้อมูลที่ควรรู้ก่อนมาฉีด Pfizer</span>
+          <span className="pt-5">
             <FaHeartbeat />{" "}
           </span>
         </span>
