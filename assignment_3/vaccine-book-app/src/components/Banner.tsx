@@ -60,7 +60,7 @@ export default function Banner() {
       <div>
         <button
           className="bg-white text-cyan-600 border-2 border-cyan-600 border-opacity-100
-  font-semibold py-2 px-2 rounded-lg z-30 absolute bottom-2 right-2
+  font-semibold py-2 px-2 rounded-lg z-3 absolute bottom-2 right-2
   transform transition-colors duration-300 hover:bg-cyan-600 hover:text-white hover:border-transparent"
           onClick={(e) => {
             e.stopPropagation();
