@@ -1,9 +1,21 @@
 "use client";
-import { useReducer, useRef } from "react";
+import { useReducer, useRef, useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
 import Link from "next/link";
+import getCars from "@/libs/getCars";
 
 export default function CarPanel() {
+
+  const [carResponse, setCarResponse] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const cars = await getCars();
+      setCarResponse(cars)
+    }
+    fetchData()
+  }, []);
+
   const countRef = useRef(0);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -32,12 +44,14 @@ export default function CarPanel() {
   /*
         Mock Data for Demonstration only
     */
-  const mockCarRepo = [
-    { cid: "001", name: "Honda Civic", image: "/img/civic.jpeg" },
-    { cid: "002", name: "Toyota Civic", image: "/img/toyota.jpeg" },
-    { cid: "003", name: "Benz Civic", image: "/img/benz.jpeg" },
-    { cid: "004", name: "Bmw Civic", image: "/img/bmw.jpeg" },
-  ];
+  // const mockCarRepo = [
+  //   { cid: "001", name: "Honda Civic", image: "/img/civic.jpeg" },
+  //   { cid: "002", name: "Toyota Civic", image: "/img/toyota.jpeg" },
+  //   { cid: "003", name: "Benz Civic", image: "/img/benz.jpeg" },
+  //   { cid: "004", name: "Bmw Civic", image: "/img/bmw.jpeg" },
+  // ];
+
+  if (!carResponse) return (<p>Car Panel is Loading ...</p>)
 
   return (
     <div>
@@ -51,11 +65,11 @@ export default function CarPanel() {
           alignContent: "space-around",
         }}
       >
-        {mockCarRepo.map((carItem) => (
-          <Link href={`/car/${carItem.cid}`} className="w-1/5">
+        {carResponse.data.map((carItem:Object) => (
+          <Link href={`/car/${carItem.id}`} className="w-1/5">
             <ProductCard
-              carName={carItem.name}
-              imgSrc={carItem.image}
+              carName={carItem.model}
+              imgSrc={carItem.picture}
               onCompare={(car: string) =>
                 dispatchCompare({ type: "add", carName: car })
               }
