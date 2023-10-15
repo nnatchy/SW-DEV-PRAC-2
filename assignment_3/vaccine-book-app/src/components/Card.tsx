@@ -1,3 +1,4 @@
+'use client'
 import styles from "./card.module.css";
 import Image from "next/image";
 import InteractiveCard from "./InteractiveCard";
@@ -14,8 +15,8 @@ export default function Card({
   hospitalName: string;
   imgSrc: string;
   hospitalSrc: string;
-  onClickRating: Function;
-  ratingList: Map<string, number>;
+  onClickRating?: Function;
+  ratingList?: Map<string, number>;
 }) {
   return (
     <InteractiveCard contentName={hospitalName}>
@@ -37,20 +38,24 @@ export default function Card({
           <div className="flex justify-center">{hospitalSrc}</div>
         </div>
         <div className="flex justify-center">
-          <Rating
-            name="rating-controlled"
-            defaultValue={0}
-            value={ratingList.get(hospitalName) || 0}
-            precision={0.5}
-            size="large"
-            onChange={(e, newVal) => {
-              e.stopPropagation();
-              onClickRating(newVal, e);
-            }}
-            onClick={(e) => {
-              e.stopPropagation();
-            }}
-          />
+          {
+            onClickRating && ratingList ?
+              <Rating
+                name="rating-controlled"
+                defaultValue={0}
+                value={ratingList.get(hospitalName) || 0}
+                precision={0.5}
+                size="large"
+                onChange={(e, newVal) => {
+                  e.stopPropagation();
+                  onClickRating(newVal, e);
+                }}
+                onClick={(e) => {
+                  e.stopPropagation();
+                }}
+              />
+              : ''
+          }
         </div>
       </div>
     </InteractiveCard>

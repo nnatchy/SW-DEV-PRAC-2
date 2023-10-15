@@ -1,5 +1,4 @@
 import Banner from "@/components/Banner";
-import CardPanel from "@/components/CardPanel";
 import PromoteCard from "@/components/PromoteCard";
 import styles from "./page.module.css";
 import { FaHeartbeat, FaQuestionCircle, FaPhoneAlt } from "react-icons/fa";
