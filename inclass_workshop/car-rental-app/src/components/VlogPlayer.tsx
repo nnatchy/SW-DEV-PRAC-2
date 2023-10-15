@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { useWindowListener } from "./hooks/useWindowListener";
+import { useWindowListener } from "../hooks/useWindowListener";
 
 export function VlogPlayer({
   vdoSrc,
