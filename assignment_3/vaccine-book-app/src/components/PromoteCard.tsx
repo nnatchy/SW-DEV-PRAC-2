@@ -1,7 +1,7 @@
 'use client'
 import { useState } from "react";
 import { VideoPlayer } from "./VideoPlayer"
-import { useWindowListener } from "./hooks/useWindowListener";
+import { useWindowListener } from "../hooks/useWindowListener";
 
 
 export default function PromoteCard() {
