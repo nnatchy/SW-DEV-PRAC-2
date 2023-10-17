@@ -11,7 +11,6 @@ export function VideoPlayer({videoPath, isPlaying} : {videoPath: string, isPlayi
     }, [isPlaying]);
 
     return (
-        <div>
             <video 
             src={videoPath}
             ref={vdoRef}
@@ -20,7 +19,6 @@ export function VideoPlayer({videoPath, isPlaying} : {videoPath: string, isPlayi
             muted
             preload="metadata"
             className="w-full border-4 rounded-lg border-black"
-            ></video>
-        </div>
+            />
     )
 }

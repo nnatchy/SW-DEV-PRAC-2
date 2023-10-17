@@ -5,6 +5,7 @@ import { FaCalendarAlt, FaSearchLocation } from "react-icons/fa";
 import styles from "./banner.module.css";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { useSession } from "next-auth/react";
 
 export default function Banner() {
   const covers = [
@@ -15,6 +16,8 @@ export default function Banner() {
   ];
   const [index, setIndex] = useState(0);
   const router = useRouter();
+  const {data: session} = useSession();
+  console.log(session?.user.token);
 
   return (
     <div className={styles.banner}>
@@ -30,6 +33,11 @@ export default function Banner() {
         className={styles.image}
       />
       <div className={styles.bannerText}>
+        <div className="absolute mt-[30px] pt-[50px] right-0 pr-[25px] text-[20px]">
+          {
+            session ? <span className="text-white font-bold">Welcome {session.user?.name} !</span> : ''
+          }
+        </div>
         <h4 className="flex pl-12">
           {" "}
           <FaCalendarAlt />{" "}
