@@ -10,23 +10,31 @@ export default async function TopMenu() {
 
     return (
         <div className='flex justify-between'>
-            <div className='fixed top-0 z-[12] pt-5 w-full font-bold pl-2'>
-                {
-                    session ? <Link href="/api/auth/signout">
-                        <div className='flex items-center absolute h-full px-2 text-white text-md'>
-                            Sign-Out of {session.user?.name}
-                        </div>
-                    </Link>
-                        : <Link href="/api/auth/signin" >
-                            <div className='flex items-center absolute h-full px-2 text-white text-md'>
-                                Sign-In
-                            </div>
-                        </Link>
-                }
-            </div>
+
             <div className='flex w-full fixed z-[11] justify-end
         bg-gradient-to-l from-blue-950 from-10% via-indigo-600 
         via-60% to-sky-400 to-95%'>
+                <div className='flex w-full h-full items-center top-0 z-[12] pt-5 w-full font-bold pl-5'>
+                    {
+                        session ? <Link href="/api/auth/signout">
+                            <div className='flex items-center font-bold align-middle pr-2 
+        text-md transition-transform transform hover:scale-[1.155] 
+        duration-300 text-white'>
+                                Sign-Out of {session.user?.name}
+                            </div>
+                        </Link>
+                            : <Link href="/api/auth/signin" >
+                                <div className='    flex items-center font-bold align-middle pr-2 
+        text-md transition-transform transform hover:scale-[1.155] 
+        duration-300 text-white'>
+                                    Sign-In
+                                </div>
+                            </Link>
+                    }
+                    <div className='pl-5'>
+                        <TopMenuItem title='My Booking' pageRef='/mybooking' />
+                    </div>
+                </div>
                 <TopMenuItem title='Booking' pageRef='/booking' />
                 <Image src={'/img/vaccine.png'}
                     className='ml-10 w-[100px] h-[60px]'
