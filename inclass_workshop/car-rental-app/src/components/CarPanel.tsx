@@ -3,10 +3,11 @@ import { useReducer, useRef, useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
 import Link from "next/link";
 import getCars from "@/libs/getCars";
+import { CarItem, CarJson } from "interface";
 
 export default function CarPanel() {
 
-  const [carResponse, setCarResponse] = useState(null);
+  const [carResponse, setCarResponse] = useState<CarJson|null>(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -65,7 +66,7 @@ export default function CarPanel() {
           alignContent: "space-around",
         }}
       >
-        {carResponse.data.map((carItem:Object) => (
+        {carResponse.data.map((carItem:CarItem) => (
           <Link href={`/car/${carItem.id}`} className="w-1/5">
             <ProductCard
               carName={carItem.model}
