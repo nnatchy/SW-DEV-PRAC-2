@@ -35,6 +35,8 @@ export default async function TopMenu() {
                         <TopMenuItem title='My Booking' pageRef='/mybooking' />
                     </div>
                 </div>
+                <TopMenuItem title='Hospital' pageRef='/hospital' />
+                <div className='px-5'></div>
                 <TopMenuItem title='Booking' pageRef='/booking' />
                 <Image src={'/img/vaccine.png'}
                     className='ml-10 w-[100px] h-[60px]'
